@@ -1,10 +1,38 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import styled from "styled-components"
+
+
+const Container = styled.main`
+  display: flex;
+  background: red;
+  margin-bottom: 10rem;
+`
+
+const Intro = styled.section`
+  background: blue;
+  height: auto;
+  width: 50%;
+  padding: 3rem 3rem;
+`
+
+const ImageContainer = styled.aside`
+  background: yellow;
+  height: auto;
+  width: 50%;
+`
+
+const H1 = styled.h1`
+  font-family: 'IBM Plex Serif';
+`
+
+const H3 = styled.h3`
+  font-family: 'IBM Plex Mono';
+`
 
 export const IndexPageTemplate = ({
   image,
@@ -15,55 +43,15 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => (
-  <div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                {/*<Features gridItems={intro.blurbs} />*/}
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  {/*<BlogRoll />*/}
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+  <Container>
+    <Intro>
+      <H1>{mainpitch.title}</H1>
+      <H3>{mainpitch.description}</H3>
+      <p>{description}</p>
+      {/*<Features gridItems={intro.blurbs} />*/}
+    </Intro>
+    <ImageContainer></ImageContainer>
+  </Container>
 )
 
 IndexPageTemplate.propTypes = {
@@ -124,7 +112,6 @@ export const pageQuery = graphql`
           title
           description
         }
-        description
         intro {
           blurbs {
             image {
