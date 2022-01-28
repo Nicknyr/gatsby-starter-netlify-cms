@@ -12,13 +12,14 @@ const Button = styled.button`
 `
 
 const StyledFooter = styled.footer`
-  background: black;
+  background: #181818;
+  color: white;
 `
 
 const Footer = class extends React.Component {
   render() {
     return (
-      <StyledFooter className="footer has-background-black has-text-white-ter">
+      <StyledFooter>
         <div className="content has-text-centered">
           {/* background image */}
         </div>

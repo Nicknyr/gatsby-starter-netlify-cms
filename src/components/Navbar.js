@@ -1,5 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from "styled-components"
+
+
+const CustomNavbar = styled.nav`
+  background: #181818;
+`
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -32,7 +38,7 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav
+      <CustomNavbar
         className="navbar is-transparent"
         role="navigation"
         aria-label="main-navigation"
@@ -85,7 +91,7 @@ const Navbar = class extends React.Component {
             </div>
           </div>
         </div>
-      </nav>
+      </CustomNavbar>
     )
   }
 }

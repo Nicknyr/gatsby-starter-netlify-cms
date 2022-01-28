@@ -9,25 +9,33 @@ import styled from "styled-components"
 
 const Container = styled.main`
   display: flex;
-  background: red;
+  flex-direction: column;
+  background: #181818;
   margin-bottom: 10rem;
+  padding: 1rem;
 `
 
 const Intro = styled.section`
-  background: blue;
   height: auto;
-  width: 50%;
-  padding: 3rem 3rem;
+  width: 100%;
+  color: #FFF;
+  text-shadow: 1px 1px 1px #CCCCCC;
+  {/*line-height: 4rem;*/}
+
+  @media(min-width: 992px) {
+    padding: 3rem 8rem;
+  }
 `
 
 const ImageContainer = styled.aside`
-  background: yellow;
   height: auto;
   width: 50%;
 `
 
 const H1 = styled.h1`
   font-family: 'IBM Plex Serif';
+  font-weight: 800;
+  font-size: 3rem !important;
 `
 
 const H3 = styled.h3`

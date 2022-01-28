@@ -33,6 +33,7 @@
     "react-dom": "^16.8.4",
     "react-helmet": "^6.0.0",
     "styled-components": "^5.3.3",
+    "styled-reset": "^4.3.4",
     "url-loader": "^4.1.1",
     "uuid": "^7.0.0",
     "yarn": "^1.22.17"

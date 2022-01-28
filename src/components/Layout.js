@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import { GlobalStyle } from "../themes/theme.js"
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
