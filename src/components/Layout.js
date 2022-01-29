@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 import { GlobalStyle } from "../themes/theme.js"
+import NewNavbar from '../components/newNavbar'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -48,7 +49,8 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
+      {/*<Navbar />*/}
+      <NewNavbar />
       <div>{children}</div>
       <Footer />
     </div>

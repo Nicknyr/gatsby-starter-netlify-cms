@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 
 const CustomNavbar = styled.nav`
-  background: #181818;
+  
 `
 
 const Navbar = class extends React.Component {

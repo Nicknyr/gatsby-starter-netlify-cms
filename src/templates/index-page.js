@@ -19,7 +19,7 @@ const Intro = styled.section`
   height: auto;
   width: 100%;
   color: #FFF;
-  text-shadow: 1px 1px 1px #CCCCCC;
+  padding: 2rem 0;
   {/*line-height: 4rem;*/}
 
   @media(min-width: 992px) {
@@ -36,10 +36,15 @@ const H1 = styled.h1`
   font-family: 'IBM Plex Serif';
   font-weight: 800;
   font-size: 3rem !important;
+  text-shadow: 1px 1px 1px #CCCCCC;
 `
 
 const H3 = styled.h3`
   font-family: 'IBM Plex Mono';
+  padding: 1rem .5rem;
+`
+const Button = styled.button`
+  margin: 1rem .5rem;
 `
 
 export const IndexPageTemplate = ({
@@ -56,6 +61,7 @@ export const IndexPageTemplate = ({
       <H1>{mainpitch.title}</H1>
       <H3>{mainpitch.description}</H3>
       <p>{description}</p>
+      <Button>Click Me</Button>
       {/*<Features gridItems={intro.blurbs} />*/}
     </Intro>
     <ImageContainer></ImageContainer>
